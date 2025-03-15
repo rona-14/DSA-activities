@@ -81,24 +81,38 @@ string insertAfter(string after, string data, Node *head){
 }
 
 int main(){
-    Node *head = createNode("So Big by Iyaz");
-    
-    head = insertAtEnd("Solo by Iyaz", head);
-    head = insertAtEnd("Ok by Iyaz", head);
-    head = insertAtEnd("One Less Lonely Girl by Justin Bieber", head);
-    
-    head = insertAtBeginning("Steel My Girl by One Direction", head);
-    head = insertAtBeginning("Grenade by Bruno Mars", head);
-    head = insertAtBeginning("Bubbly by Colbie Cailat", head);
-    head = insertAtBeginning("Lupaypay by Haring Manggi Meguelito Malakas", head);
+    Node *head = createNode("Mapa by SB19");
     traverse(head);
     
-    insertAfter ("Alipin Ako by Liezel Garcia", head);
-    insertAfter ("Kung Dina Ako by Agsunta", head);
-    insertAfter ("Hindi Na Bale by Bugoy Drillon", head);
+    head = insertAtEnd("Fine Line by Harry Styles", head);
+    traverse(head);
+    head = insertAtEnd("Di Mapakali by Pattia", head);
+    traverse(head);
+    head = insertAtEnd("Secrets by One Republic", head);
     traverse(head);
     
+    head = insertAtBeginning("PagMAMAhal by Ex Battalion", head);
+    traverse(head);
+    head = insertAtBeginning("Sa Bawat Sandali by Amiel Sol", head);
+    traverse(head);
+    head = insertAtBeginning("Your eyes tell by BTS", head);
+    traverse(head);
+    head = insertAtBeginning("Kidult by SEVENTEEN", head);
+    traverse(head);
     
+    insertAfter ("PagMAMAhal by Ex Battalion", "Your Song by Parokya Ni Edgar", head);
+    traverse(head);
+    insertAfter ("Sa Bawat Sandali by Amiel Sol", "With A Smile by Eraserheads", head);
+    traverse(head);
+    insertAfter ("Your eyes tell by BTS", "Araw-Araw by Ben&Ben" , head);
+    traverse(head);
+    
+    cout << deleteAtEnd(head);
+    traverse(head);
+    head = deleteFromBeginning(head);
+    traverse(head);
+    head = deleteFromGivenNode("Sa Bawat Sandali by Amiel Sol",head);
+    traverse(head);
 
     return 0;
 }
