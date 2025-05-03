@@ -13,7 +13,7 @@ bool isFull(){
         return true;
     }
     return false;
-}
+}l
 
 bool isEmpty(){
     if(rear == -1){
